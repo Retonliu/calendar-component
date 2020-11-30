@@ -7,7 +7,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
     entry: {
-        calendar: './src/main.js',
+        calendar: './src/index.js',
     },
     devtool: 'inline-source-map',
     devServer: { //默认在localhost：8080下建立服务
@@ -17,6 +17,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
+            template: './src/index.html',
             title: 'vue with webpack!'
         }),
         //new webpack.NamedModulesPlugin(),方便查看要修补的依赖,该插件已经删除，现在提供开箱即用体验
